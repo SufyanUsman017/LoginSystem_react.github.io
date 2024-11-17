@@ -25,7 +25,7 @@ export default function SignUp() {
 
   function signIn(e) {
     e.preventDefault();
-    const userFound = users.find((user) => user.userEmail === inputEmail && user.userPassword === inputPassword);
+    const userFound = users.find((user) =>{ return user.userEmail === inputEmail && user.userPassword === inputPassword});
     if (userFound) {
       alert("Welcome");
       setPersonName(userFound.userName);
